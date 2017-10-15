@@ -1,10 +1,8 @@
 <?php
-$servername = "joybdinstance.czhwdnqh98tj.us-east-2.rds.amazonaws.com";
-$username = "vensonjoy";
-$password = "vensonjoy";
+include('dbdetails.php');
 try 
 {
-    $conn = new PDO("mysql:host=joybdinstance.czhwdnqh98tj.us-east-2.rds.amazonaws.com;dbname=joydb", $username, $password);
+    $conn = new PDO("mysql:host=$endpoint;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
